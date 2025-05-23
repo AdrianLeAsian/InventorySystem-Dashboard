@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/images/logo.png" alt="Company Logo" class="logo">
+                <h2 class="company-name">AI Korean Buffet Restaurant</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><span class="icon"><img src="assets/icons/dashboard.svg" alt="Dashboard"></span> Dashboard</a></li>
+                    <li><a href="inventory.html"><span class="icon"><img src="assets/icons/inventory.svg" alt="Inventory"></span> Inventory</a></li>
+                    <li><a href="tracking.html"><span class="icon"><img src="assets/icons/tracking.svg" alt="Daily Tracking"></span> Daily Tracking</a></li>
+                    <li><a href="low-stock.html"><span class="icon"><img src="assets/icons/low-stock.svg" alt="Low Stock"></span> Low Stock</a></li>
+                    <li><a href="reports.html"><span class="icon"><img src="assets/icons/reports.svg" alt="Reports"></span> Reports</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h1>Dashboard</h1>
+            </header>
+            <section class="content">
+                <div class="toolbar">
+                    <div class="tabs">
+                        <div class="tab-slider"></div>
+                        <button class="tab-button active-tab" data-tab-id="utensils">Kitchen Utensils</button>
+                        <button class="tab-button" data-tab-id="ingredients">Food Ingredients</button>
+                    </div>
+                    <div class="export-buttons">
+                        <button class="btn btn-export">Export to PDF</button>
+                        <button class="btn btn-export">Export to Excel</button>
+                    </div>
+                </div>
+
+                <!-- Informational boxes grid -->
+                <div class="info-grid">
+                    <!-- Box 1 -->
+                    <div class="info-box" id="info-box-1">
+                        <div class="urgency-indicator"></div>
+                        <div class="info-box-content">
+                            <h3 class="info-box-title">Placeholder Title 1</h3>
+                            <p class="info-box-value">0</p>
+                            <p class="info-box-secondary">Placeholder Secondary 1</p>
+                        </div>
+                    </div>
+
+                    <!-- Box 2 -->
+                    <div class="info-box" id="info-box-2">
+                        <div class="urgency-indicator"></div>
+                        <div class="info-box-content">
+                            <h3 class="info-box-title">Placeholder Title 2</h3>
+                            <p class="info-box-value">0</p>
+                            <p class="info-box-secondary">Placeholder Secondary 2</p>
+                        </div>
+                    </div>
+
+                    <!-- Box 3 -->
+                    <div class="info-box" id="info-box-3">
+                        <div class="urgency-indicator"></div>
+                        <div class="info-box-content">
+                            <h3 class="info-box-title">Placeholder Title 3</h3>
+                            <p class="info-box-value">0</p>
+                            <p class="info-box-secondary">Placeholder Secondary 3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed view grid: Usage Trends and Low Stock Alerts -->
+                <div class="details-grid">
+                    <!-- Box 1: Usage Trends Chart -->
+                    <div class="details-box chart-box">
+                        <div class="details-box-header">
+                            <h3 class="details-box-title">Usage Trends</h3>
+                            <div class="dropdown chart-period-dropdown">
+                                <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                                    <span class="dropdown-label">Daily</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#" data-period="daily">Daily</a></li>
+                                    <li><a href="#" data-period="weekly">Weekly</a></li>
+                                    <li><a href="#" data-period="monthly">Monthly</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div id="main-chart-area" class="chart-area-mockup active-chart-area">
+                                <div class="chart-caption-area">
+                                    <p class="chart-caption-text">Usage Data Placeholder</p>
+                                </div>
+                                <svg class="line-graph-svg" width="100%" height="100%">
+                                    <!-- JS will populate this with SVG elements for the line graph -->
+                                </svg>
+                                <div class="chart-x-axis-label">Time / Items</div>
+                                <div class="chart-y-axis-label">Amount Used</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Box 2: Low Stock Alerts -->
+                    <div class="details-box alerts-box">
+                        <div class="details-box-header">
+                            <h3 class="details-box-title">Low Stock Alerts</h3>
+                        </div>
+                        <div class="low-stock-content">
+                            <div class="low-stock-cards-container" id="dynamic-low-stock-container">
+                                <!-- JS will populate this with item cards -->
+                                <p>Loading low stock alerts...</p> <!-- Initial placeholder text -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder for the main page content related to the selected tab -->
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
